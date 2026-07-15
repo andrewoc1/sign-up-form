@@ -1,13 +1,20 @@
+:root {
+  --font-fam: Verdana;
+  --btn-inp-radius: 5px;
+  --btn-pad: 3px;
+}
+
 * {
   margin: 0;
   padding: 0;
-  font-family: Verdana, sans-serif;
+}
+
+body {
+  font-family: var(--font-fam, sans-serif);
 }
 
 .container {
   display: flex;
-  gap: 100px;
-
   min-height: 100vh;
   position: relative;
 }
@@ -15,7 +22,31 @@
 .sidebar-container {
   width: 500px;
   flex-shrink: 0;
-  position: relative;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+h3 {
+  position: absolute;
+  width: 100%;
+  top: 20vh;
+  color: lightblue;
+  font-size: 5rem;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.sidebar-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 100%;
+
+  background: linear-gradient(to right, rgba(10, 100, 201, 0), #bdc5a4);
+
+  pointer-events: none;
 }
 
 .sidebar-container img {
@@ -32,21 +63,64 @@ figure figcaption {
 }
 
 .form-container {
-  position: absolute;
-  top: 10rem;
-  left: 40rem;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 2rem;
+  background-color: rgba(0, 197, 80, 0.4);
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 20px;
-  top: 10rem;
+  margin: 15px;
+  gap: 1.5rem;
+  padding: 2.5rem;
   background-color: lightblue;
+  border-radius: 20px;
 }
 
 .form-row {
   display: flex;
-  gap: 90px;
+  justify-content: space-between;
+  gap: 50px;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  border-radius: var(--btn-inp-radius);
+  background-color: green;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+}
+
+button:hover {
+  background-color: #333333;
+}
+button:active {
+  transform: scale(0.98);
+}
+
+input {
+  border-radius: var(--btn-inp-radius);
+  padding: var(--btn-pad);
+}
+
+figcaption {
+  color: black;
+  font-weight: 1000;
 }

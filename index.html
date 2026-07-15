@@ -14,6 +14,7 @@
             src="skiImg.jpg"
             alt="Picture of skier jumping and crossing skis"
           />
+          <h3>SkiWrld⛷</h3>
           <figcaption>
             Photo by
             <a
@@ -30,34 +31,39 @@
       </div>
 
       <div class="form-container">
+        <h2>Sign Up to ski and the top of the mountain!</h2>
         <form action="#" method="POST">
-          <h2>Sign Up to ski and the top of the mountain!</h2>
           <div class="form-row">
             <div class="form-group">
               <label for="first_name">First Name</label>
-              <input type="text" name="first_name" id="first_name" />
+              <input type="text" name="first_name" id="first_name" required />
             </div>
             <div class="form-group">
               <label for="last_name">Last Name</label>
-              <input type="text" name="last_name" id="last_name" />
+              <input type="text" name="last_name" id="last_name" required />
             </div>
           </div>
 
           <div class="form-row">
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" name="email" id="email" />
+              <input type="email" name="email" id="email" required />
             </div>
             <div class="form-group">
               <label for="phone_number">Phone Number</label>
-              <input type="tel" name="phone_number" id="phone_number" />
+              <input
+                type="tel"
+                name="phone_number"
+                id="phone_number"
+                required
+              />
             </div>
           </div>
 
           <div class="form-row">
             <div class="form-group">
               <label for="password">Password</label>
-              <input type="password" name="password" id="password" />
+              <input type="password" name="password" id="password" required />
             </div>
             <div class="form-group">
               <label for="confirm-password">Confirm Password</label>
@@ -65,13 +71,15 @@
                 type="password"
                 name="confirm-password"
                 id="confirm-password"
+                required
               />
             </div>
           </div>
 
           <button type="submit">Create Account</button>
+
+          <h6>Already have an account? <a href="#">Log In</a></h6>
         </form>
-        <h6>Already have an account? <a href="#">Log In</a></h6>
       </div>
     </div>
   </body>
