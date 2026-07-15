@@ -31,7 +31,7 @@
       </div>
 
       <div class="form-container">
-        <h2>Sign Up to ski and the top of the mountain!</h2>
+        <h2>Create an account to ski at the top of the mountain!</h2>
         <form action="#" method="POST">
           <div class="form-row">
             <div class="form-group">
@@ -63,7 +63,14 @@
           <div class="form-row">
             <div class="form-group">
               <label for="password">Password</label>
-              <input type="password" name="password" id="password" required />
+              <input
+                type="password"
+                name="password"
+                id="password"
+                minlength="8"
+                maxlength="20"
+                required
+              />
             </div>
             <div class="form-group">
               <label for="confirm-password">Confirm Password</label>
@@ -71,6 +78,8 @@
                 type="password"
                 name="confirm-password"
                 id="confirm-password"
+                minlength="8"
+                maxlength="20"
                 required
               />
             </div>

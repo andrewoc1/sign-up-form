@@ -81,6 +81,9 @@ form {
   padding: 2.5rem;
   background-color: lightblue;
   border-radius: 20px;
+  box-shadow:
+    0px 3px 1px rgba(226, 197, 203, 0.3),
+    1px 1px 1px 1px white;
 }
 
 .form-row {
@@ -112,12 +115,26 @@ button:hover {
   background-color: #333333;
 }
 button:active {
-  transform: scale(0.98);
+  transform: scale(0.97);
 }
 
 input {
   border-radius: var(--btn-inp-radius);
   padding: var(--btn-pad);
+}
+
+input:user-valid {
+  border: 2px solid green;
+}
+
+input:user-invalid {
+  border: 2px solid red;
+}
+
+input:focus {
+  box-shadow: 1px 1px 1px 1px lightgrey;
+  border: 2px solid blue;
+  background-color: rgba(226, 197, 164, 0.4);
 }
 
 figcaption {
